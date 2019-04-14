@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TravelAssistant</string>
+    <string name="facebook_app_id">2331213423799792</string>
+    <string name="fb_login_protocol_scheme">fb2331213423799792</string>
+    <string name="google_key">AIzaSyBfC0E4KjAMP65sYlj-ReTEHHgrrWYveRg</string>
+    <string name="default_web_client_id_2">627089130911-sd7ib8khcchbv5lb28kn5qt96d1ct6hj.apps.googleusercontent.com</string>
 </resources>
