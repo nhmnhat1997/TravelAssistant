@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_places"
+            android:icon="@drawable/ic_person_24dp"
+            android:title="Places" />
+        <item
+            android:id="@+id/nav_hotels"
+            android:icon="@drawable/ic_home"
+            android:title="Hotels" />
+        <item
+            android:id="@+id/nav_restaurant"
+            android:icon="@drawable/ic_restaurant"
+            android:title="Restaurant" />
+        <!--<item-->
+            <!--android:id="@+id/nav_storage"-->
+            <!--android:icon="@drawable/ic_file_multiple"-->
+            <!--android:title="@string/menu_item_my_storage" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_companions"-->
+            <!--android:icon="@drawable/ic_account_multiple"-->
+            <!--android:title="@string/menu_item_companions" />-->
+
+        <item android:title="My Diary" >
+            <menu>
+                <group android:checkableBehavior="single">
+                    <!--<item-->
+                        <!--android:id="@+id/nav_places_bucketlist"-->
+                        <!--android:icon="@drawable/ic_action_like"-->
+                        <!--android:title="@string/menu_item_place_bucketlist" />-->
+                    <item
+                        android:id="@+id/nav_diary"
+                        android:icon="@drawable/ic_pen"
+                        android:title="My Diary" />
+
+                </group>
+            </menu>
+        </item>
+    </group>
+
+
+    <group
+        android:id="@+id/menu_settings"
+        android:checkableBehavior="single">
+        <!--<item-->
+            <!--android:id="@+id/nav_settings"-->
+            <!--android:icon="@drawable/ic_settings"-->
+            <!--android:title="@string/menu_item_settings" />-->
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout" />
+    </group>
+</menu>
