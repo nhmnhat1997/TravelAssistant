@@ -5,12 +5,14 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.assignment.travelassistant.model.Diary;
+import com.bumptech.glide.Glide;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -38,6 +40,10 @@ public class DiariesAdapter extends RecyclerView.Adapter<DiariesAdapter.MyViewHo
         holder.title.setText(mList.get(position).getTitle());
         holder.content.setText(mList.get(position).getContent());
         holder.date.setText(sdf.format(mList.get(position).getTimeStamp()));
+        if (mList.get(position).getPhotoURLs() != null
+        && !mList.get(position).getPhotoURLs().equals("")) {
+            Glide.with(mContext).load(mList.get(position).getPhotoURLs()).into(holder.imgDiary);
+        }
     }
 
     @Override
@@ -58,11 +64,13 @@ public class DiariesAdapter extends RecyclerView.Adapter<DiariesAdapter.MyViewHo
 
     class MyViewHolder extends RecyclerView.ViewHolder{
         TextView title, date, content;
+        ImageView imgDiary;
         public MyViewHolder(View itemView){
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.tv_title);
             date = (TextView) itemView.findViewById(R.id.tv_date);
             content = (TextView) itemView.findViewById(R.id.tv_content);
+            imgDiary = (ImageView) itemView.findViewById(R.id.img_diary);
         }
     }
 }

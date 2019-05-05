@@ -64,25 +64,23 @@
         android:textColor="#000000"
         android:textSize="18sp"
         android:padding="5dp"
-        android:visibility="gone"/>
+        android:paddingBottom="0dp"
+        android:visibility="visible"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        tools:listitem="@layout/item_image"
-        android:visibility="gone">
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/default_img2" />
 
-    </androidx.recyclerview.widget.RecyclerView>
-
-    <TextView
-        android:id="@+id/tvContent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Content:"
-        android:textSize="18sp"
-        android:textColor="#000000"
-        android:padding="5dp"/>
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Content:"
+                android:textColor="#000000"
+                android:textSize="18sp" />
 
     <EditText
         android:id="@+id/edt_content"

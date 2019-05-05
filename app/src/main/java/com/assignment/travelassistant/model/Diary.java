@@ -7,7 +7,7 @@ public class Diary {
     private long timeCreated;
     private String content;
     private String title;
-    private ArrayList<String> photoURLs;
+    private String photoURLs;
 
     public long getTimeStamp() {
         return timeStamp;
@@ -21,11 +21,11 @@ public class Diary {
         return content;
     }
 
-    public ArrayList<String> getPhotoURLs() {
+    public String getPhotoURLs() {
         return photoURLs;
     }
 
-    public void setPhotoURLs(ArrayList<String> photoURLs) {
+    public void setPhotoURLs(String photoURLs) {
         this.photoURLs = photoURLs;
     }
 
