@@ -53,8 +53,11 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:padding="12dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
             android:text="Login"
             android:id="@+id/btnLogin"
+            android:background="@drawable/button_shape"
             />
         <com.google.android.gms.common.SignInButton
             android:id="@+id/google_sign_in_button"

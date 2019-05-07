@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,6 +35,8 @@ public class SignUpActivity extends AppCompatActivity {
     EditText edtPassword;
     @BindView(R.id.btnSignUp)
     AppCompatButton btnSignUp;
+    @BindView(R.id.link_login)
+    TextView linkLogin;
 
     private FirebaseAuth mAuth;
 
@@ -100,6 +103,7 @@ public class SignUpActivity extends AppCompatActivity {
                                         user.updateProfile(userProfileChangeRequest).addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
+                                                Toast.makeText(SignUpActivity.this, "Create account successfully!", Toast.LENGTH_LONG).show();
                                                 Intent intent = new Intent(SignUpActivity.this,LoginActivity.class);
                                                 startActivity(intent);
                                                 finish();
@@ -113,6 +117,14 @@ public class SignUpActivity extends AppCompatActivity {
                             });
                 }
 
+            }
+        });
+        linkLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

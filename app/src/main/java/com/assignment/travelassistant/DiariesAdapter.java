@@ -2,10 +2,12 @@ package com.assignment.travelassistant;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -44,6 +46,22 @@ public class DiariesAdapter extends RecyclerView.Adapter<DiariesAdapter.MyViewHo
         && !mList.get(position).getPhotoURLs().equals("")) {
             Glide.with(mContext).load(mList.get(position).getPhotoURLs()).into(holder.imgDiary);
         }
+        holder.cardviewLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext,DiaryDetailActivity.class);
+                intent.putExtra("title", mList.get(position).getTitle());
+                intent.putExtra("content",mList.get(position).getContent());
+                intent.putExtra("date",mList.get(position).getTimeStamp());
+                if (mList.get(position).getPhotoURLs() != null
+                        && !mList.get(position).getPhotoURLs().equals("")) {
+                    intent.putExtra("photoURL", mList.get(position).getPhotoURLs());
+                } else {
+                    intent.putExtra("photoURL", "");
+                }
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -65,12 +83,14 @@ public class DiariesAdapter extends RecyclerView.Adapter<DiariesAdapter.MyViewHo
     class MyViewHolder extends RecyclerView.ViewHolder{
         TextView title, date, content;
         ImageView imgDiary;
+        LinearLayout cardviewLayout;
         public MyViewHolder(View itemView){
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.tv_title);
             date = (TextView) itemView.findViewById(R.id.tv_date);
             content = (TextView) itemView.findViewById(R.id.tv_content);
             imgDiary = (ImageView) itemView.findViewById(R.id.img_diary);
+            cardviewLayout = (LinearLayout) itemView.findViewById(R.id.cardview_linear);
         }
     }
 }
