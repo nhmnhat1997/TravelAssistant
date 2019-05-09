@@ -1,4 +1,4 @@
-package com.assignment.travelassistant;
+package com.assignment.travelassistant.main_activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -16,6 +16,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.assignment.travelassistant.R;
+import com.assignment.travelassistant.main_activity.diary.DiaryFragment;
+import com.assignment.travelassistant.signin.LoginActivity;
 import com.bumptech.glide.Glide;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;

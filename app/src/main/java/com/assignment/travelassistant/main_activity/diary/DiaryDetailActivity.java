@@ -1,12 +1,12 @@
-package com.assignment.travelassistant;
+package com.assignment.travelassistant.main_activity.diary;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.assignment.travelassistant.R;
 import com.bumptech.glide.Glide;
 
 import java.text.SimpleDateFormat;

@@ -1,4 +1,4 @@
-package com.assignment.travelassistant;
+package com.assignment.travelassistant.main_activity;
 
 
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.assignment.travelassistant.R;
 
 public class PlacesFragment extends Fragment {
     

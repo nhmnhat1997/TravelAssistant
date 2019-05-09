@@ -1,20 +1,20 @@
-package com.assignment.travelassistant;
+package com.assignment.travelassistant.signup;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.assignment.travelassistant.R;
+import com.assignment.travelassistant.signin.LoginActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -104,7 +104,7 @@ public class SignUpActivity extends AppCompatActivity {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 Toast.makeText(SignUpActivity.this, "Create account successfully!", Toast.LENGTH_LONG).show();
-                                                Intent intent = new Intent(SignUpActivity.this,LoginActivity.class);
+                                                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                                                 startActivity(intent);
                                                 finish();
                                             }
