@@ -1,4 +1,4 @@
-package com.assignment.travelassistant;
+package com.assignment.travelassistant.main_activity.diary;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.assignment.travelassistant.R;
 import com.assignment.travelassistant.model.Diary;
 import com.bumptech.glide.Glide;
 
@@ -49,7 +50,7 @@ public class DiariesAdapter extends RecyclerView.Adapter<DiariesAdapter.MyViewHo
         holder.cardviewLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext,DiaryDetailActivity.class);
+                Intent intent = new Intent(mContext, DiaryDetailActivity.class);
                 intent.putExtra("title", mList.get(position).getTitle());
                 intent.putExtra("content",mList.get(position).getContent());
                 intent.putExtra("date",mList.get(position).getTimeStamp());

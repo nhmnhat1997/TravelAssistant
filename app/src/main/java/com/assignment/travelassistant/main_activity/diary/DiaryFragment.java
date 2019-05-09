@@ -1,4 +1,4 @@
-package com.assignment.travelassistant;
+package com.assignment.travelassistant.main_activity.diary;
 
 
 import android.content.Intent;
@@ -14,6 +14,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.assignment.travelassistant.main_activity.diary.CreateDiaryActivity;
+import com.assignment.travelassistant.R;
+import com.assignment.travelassistant.main_activity.diary.DiariesAdapter;
 import com.assignment.travelassistant.model.Diary;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
@@ -47,7 +50,7 @@ public class DiaryFragment extends Fragment {
         fabAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),CreateDiaryActivity.class);
+                Intent intent = new Intent(getActivity(), CreateDiaryActivity.class);
                 startActivity(intent);
             }
         });
