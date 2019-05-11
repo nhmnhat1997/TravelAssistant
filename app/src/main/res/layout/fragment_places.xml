@@ -11,6 +11,12 @@
         android:layout_height="wrap_content"
         android:text="Hello places fragment"
         android:textSize="30sp"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rcl_places"/>
 
 </RelativeLayout>
