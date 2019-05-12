@@ -9,12 +9,15 @@ import butterknife.ButterKnife;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.assignment.travelassistant.main_activity.MainActivity;
 import com.assignment.travelassistant.R;
+import com.assignment.travelassistant.signup.SignUpActivity;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -48,6 +51,9 @@ public class LoginActivity extends AppCompatActivity {
     EditText edtPassword;
     @BindView(R.id.btnLogin)
     AppCompatButton btnLogin;
+    @BindView(R.id.link_sign_up)
+    TextView linkSignUp;
+
     private FirebaseAuth mAuth;
     private GoogleSignInOptions gso;
     private GoogleSignInClient mGoogleSignInClient;
@@ -62,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         SignInButton signInButton = findViewById(R.id.google_sign_in_button);
         LoginButton fbloginButton = findViewById(R.id.fb_login_button);
+
 
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +99,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onError(FacebookException error) {
 
+            }
+        });
+        linkSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+                startActivity(intent);
             }
         });
     }

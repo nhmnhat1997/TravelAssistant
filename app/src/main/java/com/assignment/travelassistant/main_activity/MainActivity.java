@@ -18,6 +18,9 @@ import android.widget.TextView;
 
 import com.assignment.travelassistant.R;
 import com.assignment.travelassistant.main_activity.diary.DiaryFragment;
+import com.assignment.travelassistant.main_activity.hotel.HotelsFragment;
+import com.assignment.travelassistant.main_activity.place.PlacesFragment;
+import com.assignment.travelassistant.main_activity.restaurant.RestaurantsFragment;
 import com.assignment.travelassistant.signin.LoginActivity;
 import com.bumptech.glide.Glide;
 import com.google.android.material.navigation.NavigationView;

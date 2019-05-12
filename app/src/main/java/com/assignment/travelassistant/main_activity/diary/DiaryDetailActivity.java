@@ -3,6 +3,7 @@ package com.assignment.travelassistant.main_activity.diary;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,6 +23,10 @@ public class DiaryDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diary_detail);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("Diary detail");
+
 
         title = (TextView) findViewById(R.id.edt_title);
         content = (TextView) findViewById(R.id.edt_content);
@@ -34,5 +39,13 @@ public class DiaryDetailActivity extends AppCompatActivity {
         if (!getIntent().getStringExtra("photoURL").equals("")) {
             Glide.with(this).load(getIntent().getStringExtra("photoURL")).into(image);
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

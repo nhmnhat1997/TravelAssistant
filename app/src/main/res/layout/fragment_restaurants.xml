@@ -6,11 +6,10 @@
     tools:context=".main_activity.diary.DiaryFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello restaurants fragment"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"/>
+        android:id="@+id/rcl_restaurants"/>
 
 </RelativeLayout>
